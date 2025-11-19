@@ -1,8 +1,7 @@
 import { Router } from 'express';
-import { createUserController } from '../controller/createUserController';
-import { loginController } from '../auth/loginController';
+import { userController } from '../controller/createUserController';
 
 export const userRoutes = Router();
 
-userRoutes.post('/', createUserController);
-userRoutes.post('/login', loginController);
+userRoutes.post('/register', userController.register);
+userRoutes.post('/login', userController.login);
