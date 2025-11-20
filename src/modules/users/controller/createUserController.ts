@@ -11,8 +11,7 @@ export const userController = {
         return res.status(400).json({ message: err.message }); 
       }
     },
-
-
+    
     login: async (req: Request, res: Response) => {
       try {
         const { email, password } = req.body;
